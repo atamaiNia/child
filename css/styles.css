@@ -1,0 +1,71 @@
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu-item {
+  display: flex;
+  background-color: tomato;
+  width: calc((100% - 90px) / 4);
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+/* кожен четвертий */
+.menu-item:nth-child(4n) {
+  margin-right: 0;
+}
+/* останніх чотири */
+.menu-item:nth-last-child(-n + 4) {
+  margin-bottom: 0;
+}
+
+/* перший елемент */
+.menu-item:first-child {
+  background-color: aqua;
+}
+
+/* останній елемент */
+.menu-item:last-child {
+  background-color: blueviolet;
+}
+
+/* всі непарні або можна ще записати  :nth-child(2n+1)*/
+.menu-item:nth-child(odd) {
+  border: 2px solid black;
+}
+
+/* всі парні або можна ще записати :nth-child(2n) */
+.menu-item:nth-child(even) {
+  border: 5px dotted black;
+}
+
+/* п'ятий елемент */
+.menu-item:nth-child(5) {
+  background-color: yellow;
+}
+/* давати кожному третьому почанаючи з четвертого*/
+.menu-item:nth-child(3n + 4) {
+  border: 5px double black;
+}
+
+.menu-link {
+  display: flex;
+  font-size: 30px;
+  color: rgb(1, 14, 87);
+  text-decoration: none;
+}
